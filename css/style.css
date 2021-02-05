@@ -1,7 +1,147 @@
-/* Variables */
-/* Splash */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 230px 0;
+}
+
+.section-title {
+  color: #222222;
+  font-size: 75px;
+  font-family: #222222;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  color: #777777;
+  font-size: 19px;
+  font-family: "Merriweather", serif;
+  margin-bottom: 76px;
+}
+
 .splash {
-  background: red;
-  color: blue;
+  height: 100vh;
+  max-height: 700px;
+  max-width: 1400px;
+  position: relative;
+  background-image: url("https://i.postimg.cc/dttHD2MW/Background-Image.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.logo {
+  color: #FED136;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.6rem;
+  margin-top: 35px;
+}
+
+.menu-list ul {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  list-style: none;
+  margin-top: 50px;
+}
+
+.menu-list ul li {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.menu-list ul li a {
+  color: #fff;
+}
+
+.splash-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.splash-subtitle {
+  font-size: 2.5rem;
+  font-family: "Merriweather", serif;
+  text-transform: capitalize;
+}
+
+.splash-title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 21px;
+  text-transform: uppercase;
+}
+
+.btn {
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  background: #FED136;
+  border: 1px solid #707070;
+  padding: 21px 49px;
+  border-radius: 3px;
+  margin-top: 41px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .splash-subtitle {
+    font-size: 1.5rem;
+  }
+  .splash-title {
+    font-size: 3rem;
+    margin-top: 40px;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 15px 43px;
+  }
+  .menu-list ul {
+    margin-top: 15px;
+    padding: 0;
+    font-size: 1.1rem;
+  }
+  .menu-list ul li {
+    margin-right: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .splash-subtitle {
+    font-size: 1.5rem;
+  }
+  .splash-title {
+    font-size: 3rem;
+    margin-top: 40px;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 15px 43px;
+  }
+  .menu-list ul {
+    margin-top: 15px;
+    padding: 0;
+    font-size: 1.1rem;
+  }
+  .menu-list ul li {
+    margin-right: 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
