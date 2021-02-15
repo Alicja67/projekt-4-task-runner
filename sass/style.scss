@@ -39,7 +39,6 @@ body {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    color: $color-light;
 }
 .logo {
     color: #FED136;
@@ -137,33 +136,27 @@ body {
     padding: 109px 215px;
 }
 .portfolio-inner {
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 50px;
 }
 .portfolio-card {
-    height: 400px;
-    margin: 0 15px 50px 15px;
-    position: relative;
     background: $color-light;
-    padding: 0;
 }
 .portfolio-card img {
     width: 100%;
     height: 300px;
-    position: absolute;
-    top: 0;
-    left: 0;
     object-fit: cover;
 }
 .card-description {
-    position: absolute;
-    left: 50%;
-    bottom: 50px;
-}
-.description {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // flex: 1;
+    // height: calc(100% - 300px);
+    padding: 20px 0;
 }
 .portfolio-title {
     font-size: 1.1rem;
@@ -232,44 +225,21 @@ body {
     white-space: nowrap;
 }
 
-// Media
-@media (max-width: 767px) {
-    .splash-subtitle {
-        font-size: 2rem;
-        margin-top: 60px;
-    }
-    .splash-title {
-        font-size: 3rem;
-        margin-top: 40px;
-    }
-    .btn {
-        font-size: 1rem;
-        padding: 15px 43px;
-    }
-    .menu-list ul {
-        padding: 0;
-        margin-top: 15px;
-        li {
-            margin-right: 15px;
-        }
-    }
-    .services {
-        padding: 60px;
-    }
-    p {
-        margin-bottom: 3.5rem;
+@media (max-width: 1200px) {
+    .footer-site {
+        padding: 0 100px;
     }
     .portfolio {
-        padding: 60px;
+        padding: 65px;
     }
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
     .splash-subtitle {
         font-size: 2rem;
         margin-top: 60px;
     }
     .splash-title {
-        font-size: 4rem;
+        font-size: 3.7rem;
         margin-top: 40px;
     }
     .btn {
@@ -284,21 +254,56 @@ body {
     }
     .services {
         padding: 65px;
-        }
+    }
     .portfolio {
         padding: 65px
     }
+    .portfolio-inner {
+        grid-template-columns: 1fr 1fr;
+    }
     .footer-copyright {
         margin-left: 0;
+        margin-top: 10px;
     }
-    .footer-site p {;
     }
-    }
-    @media (min-width: 992px) and (max-width: 1200px) {
-        .footer-site {
-            padding: 0 100px;
+    @media (max-width: 767px) {
+        .menu-list ul {
+            margin: 0;
+        }
+        .services {
+            padding: 60px;
+        }
+        p {
+            margin-bottom: 3.5rem;
         }
         .portfolio {
-            padding: 65px;
+            padding: 60px;
+        }
+        .portfolio-inner {
+            grid-template-columns: 1fr;
+        }
+    }
+    @media (max-width: 480px) {
+        .menu-list ul {
+            display: flex;
+            flex-direction: column;
+            li {
+                border: 1px solid $color-title;
+                background: white;
+                opacity: 0.4;
+                margin: 0 30px;
+                border-radius: 5px;;
+                a {
+                    color: black;
+                }
+            }
+        }
+        .splash-subtitle {
+            font-size: 1.5rem;
+            margin-top: 80px;
+        }
+        .splash-title {
+            font-size: 3rem;
+            margin-top: 40px;
         }
     }

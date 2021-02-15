@@ -32,7 +32,6 @@ body {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  color: #fff;
 }
 
 .logo {
@@ -141,39 +140,27 @@ body {
 }
 
 .portfolio-inner {
-  -ms-flex-pack: center;
-      justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 50px;
 }
 
 .portfolio-card {
-  height: 400px;
-  margin: 0 15px 50px 15px;
-  position: relative;
   background: #fff;
-  padding: 0;
 }
 
 .portfolio-card img {
   width: 100%;
   height: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .card-description {
-  position: absolute;
-  left: 50%;
-  bottom: 50px;
-}
-
-.description {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding: 20px 0;
 }
 
 .portfolio-title {
@@ -263,13 +250,22 @@ body {
   white-space: nowrap;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
+  .footer-site {
+    padding: 0 100px;
+  }
+  .portfolio {
+    padding: 65px;
+  }
+}
+
+@media (max-width: 991px) {
   .splash-subtitle {
     font-size: 2rem;
     margin-top: 60px;
   }
   .splash-title {
-    font-size: 3rem;
+    font-size: 3.7rem;
     margin-top: 40px;
   }
   .btn {
@@ -278,10 +274,29 @@ body {
   }
   .menu-list ul {
     padding: 0;
-    margin-top: 15px;
   }
   .menu-list ul li {
     margin-right: 15px;
+  }
+  .services {
+    padding: 65px;
+  }
+  .portfolio {
+    padding: 65px;
+  }
+  .portfolio-inner {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .footer-copyright {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-list ul {
+    margin: 0;
   }
   .services {
     padding: 60px;
@@ -292,44 +307,36 @@ body {
   .portfolio {
     padding: 60px;
   }
+  .portfolio-inner {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .splash-subtitle {
-    font-size: 2rem;
-    margin-top: 60px;
-  }
-  .splash-title {
-    font-size: 4rem;
-    margin-top: 40px;
-  }
-  .btn {
-    font-size: 1rem;
-    padding: 15px 43px;
-  }
+@media (max-width: 480px) {
   .menu-list ul {
-    padding: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
   }
   .menu-list ul li {
-    margin-right: 15px;
+    border: 1px solid #222222;
+    background: white;
+    opacity: 0.4;
+    margin: 0 30px;
+    border-radius: 5px;
   }
-  .services {
-    padding: 65px;
+  .menu-list ul li a {
+    color: black;
   }
-  .portfolio {
-    padding: 65px;
+  .splash-subtitle {
+    font-size: 1.5rem;
+    margin-top: 80px;
   }
-  .footer-copyright {
-    margin-left: 0;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-  .footer-site {
-    padding: 0 100px;
-  }
-  .portfolio {
-    padding: 65px;
+  .splash-title {
+    font-size: 3rem;
+    margin-top: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */
